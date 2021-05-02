@@ -1,7 +1,7 @@
 # This file wont do us much good in this location, make sure you change the path as directed to continue!
 
 name: Docker CD
-yaml name: Docker CD
+
 
 on:
   push:
@@ -45,8 +45,7 @@ jobs:
           npm test
         env:
           CI: true
-          Build-and-Push-Docker-Image:
-    runs-on: ubuntu-latest
+          Build-and-Push-Docker-Image:    
     needs: test
     name: Docker Build, Tag, Push
 
